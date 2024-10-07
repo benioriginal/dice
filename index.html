@@ -39,8 +39,8 @@
             const dice2 = document.getElementById('dice2');
             const randomNum1 = Math.floor(Math.random() * 6) + 1;
             const randomNum2 = Math.floor(Math.random() * 6) + 1;
-            dice1.src = `dice${randomNum1}.png`;
-            dice2.src = `dice${randomNum2}.png`;
+            dice1.src = `${randomNum1}.png`;
+            dice2.src = `${randomNum2}.png`;
         }
 
         document.querySelector('.dice-container').addEventListener('click', rollDice);
