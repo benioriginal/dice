@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Roller</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+        .dice-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .dice {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="dice-container">
+        <img id="dice1" class="dice" src="dice1.png" alt="Dice 1">
+        <img id="dice2" class="dice" src="dice1.png" alt="Dice 1">
+    </div>
+
+    <script>
+        function rollDice() {
+            const dice1 = document.getElementById('dice1');
+            const dice2 = document.getElementById('dice2');
+            const randomNum1 = Math.floor(Math.random() * 6) + 1;
+            const randomNum2 = Math.floor(Math.random() * 6) + 1;
+            dice1.src = `dice${randomNum1}.png`;
+            dice2.src = `dice${randomNum2}.png`;
+        }
+
+        document.querySelector('.dice-container').addEventListener('click', rollDice);
+    </script>
+</body>
+</html>
